@@ -191,7 +191,7 @@ function ReservationForm({ setUseDate, setErrors }) {
               id="reservation_date"
               onChange={handleChange}
               // pattern="\d{4}-\d{2}-\d{2}"
-              placeholder={"Reservation Date"}
+              placeholder={"MMDDYYYY"}
             />
           </label>
           <label htmlFor="reservation_time">
@@ -202,7 +202,7 @@ function ReservationForm({ setUseDate, setErrors }) {
               id="reservation_time"
               onChange={handleChange}
               // pattern="[0-9]{2}:[0-9]{2}"
-              placeholder={"Reservation Time"}
+              placeholder={"HHMM"}
             />
           </label>
           <label htmlFor="people">
