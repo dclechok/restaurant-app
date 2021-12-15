@@ -41,7 +41,7 @@ function Dashboard({
     return () => {
       abortController.abort();
     }; //cleanup, cancels any incoming api calls
-  }, [useDate, toggleReload, RESERVATIONS_URL, setErrors]);
+  }, [useDate, toggleReload]);
 
   useEffect(() => {
     //load tables
@@ -59,7 +59,7 @@ function Dashboard({
     return () => {
       abortController.abort();
     }; //cleanup, cancels any incoming api calls
-  }, [toggleReload, TABLES_URL, setErrors]);
+  }, [toggleReload]);
 
   function handleFinish(e) {
     setToggleReload(false);
@@ -134,7 +134,7 @@ function Dashboard({
 
   useEffect(() => {
     if (dateQuery) setUseDate(dateQuery);
-  }, [dateQuery, setUseDate]);
+  }, [dateQuery]);
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -165,7 +165,7 @@ function Dashboard({
     return () => {
       abortController.abort();
     }; //cleanup, cancels any incoming api calls
-  }, [toggleButton, date, setUseDate, useDate]);
+  }, [toggleButton]);
 
   // if (reservations.data) {
   return (
