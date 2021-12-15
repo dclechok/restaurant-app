@@ -6,13 +6,13 @@ This application allows you to create and remove reservations, create tables, an
 
 ## Developed Using
 --------------
-JavaScript ES6
-React Framework
-HTML5/CSS
-Node.js
-Vercel (frontend deployment)
-Heroku (backend deployment)
-Jest (testing)
+* JavaScript ES6
+* React Framework
+* HTML5/CSS
+* Node.js
+* Vercel (frontend deployment)
+* Heroku (backend deployment)
+* Jest (testing)
 
 ### Author: Daniel C. Lechok
 ### Date: 12/15/2021
