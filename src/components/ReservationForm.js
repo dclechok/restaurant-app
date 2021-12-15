@@ -43,15 +43,29 @@ function ReservationForm({ setUseDate, setErrors }) {
 
     async function saveReservation() {
       try {
-        placeholder.reservation_date = placeholder.reservation_date.substr(4, 4) + '-' + placeholder.reservation_date.substr(2, 2) + '-' + placeholder.reservation_date.substr(0, 2);
+        placeholder.reservation_date =
+          placeholder.reservation_date.substr(4, 4) +
+          "-" +
+          placeholder.reservation_date.substr(0, 2) +
+          "-" +
+          placeholder.reservation_date.substr(2, 2);
 
-        if(placeholder.reservation_time.includes('PM')) {
-          placeholder.reservation_time = Number(placeholder.reservation_time.substr(0, 2) + placeholder.reservation_time.substr(2, 2)) + 1200;
+        if (placeholder.reservation_time.includes("PM")) {
+          placeholder.reservation_time =
+            Number(
+              placeholder.reservation_time.substr(0, 2) +
+                placeholder.reservation_time.substr(2, 2)
+            ) + 1200;
           placeholder.reservation_time = String(placeholder.reservation_time);
-          placeholder.reservation_time = placeholder.reservation_time.substr(0, 2) + ':' + placeholder.reservation_time.substr(2, 2);
-          
-        }else{
-          placeholder.reservation_time = placeholder.reservation_time.substr(0, 2) + ':' + placeholder.reservation_time.substr(2, 2);
+          placeholder.reservation_time =
+            placeholder.reservation_time.substr(0, 2) +
+            ":" +
+            placeholder.reservation_time.substr(2, 2);
+        } else {
+          placeholder.reservation_time =
+            placeholder.reservation_time.substr(0, 2) +
+            ":" +
+            placeholder.reservation_time.substr(2, 2);
         }
 
         const response = await fetch(RESERVATIONS_URL, {
@@ -93,7 +107,7 @@ function ReservationForm({ setUseDate, setErrors }) {
       }
     }
 
-    isEditPage ? updateReservation() : saveReservation();// if we're on edit page, then just update existing reservation if not save new reservation
+    isEditPage ? updateReservation() : saveReservation(); // if we're on edit page, then just update existing reservation if not save new reservation
     setPlaceholder(defaultReservationData);
     return () => abortController.abort();
   }
@@ -142,8 +156,7 @@ function ReservationForm({ setUseDate, setErrors }) {
             <input
               type="text"
               name="first_name"
-              value={placeholder.first_name
-              }
+              value={placeholder.first_name}
               id="first_name"
               onChange={handleChange}
               placeholder={`First Name`}
