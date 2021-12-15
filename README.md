@@ -13,6 +13,8 @@ This application allows you to create and remove reservations, create tables, an
 * Vercel (frontend deployment)
 * Heroku (backend deployment)
 * Jest (testing)
+* Knex
+* Express.js
 
 ### Author: Daniel C. Lechok
 ### Date: 12/15/2021
