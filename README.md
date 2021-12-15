@@ -4,7 +4,7 @@ This is the completed frontend to my Restaurant Reservation System application.
 
 This application allows you to create and remove reservations, create tables, and seat reservations at tables. Also, a search is included to allow the user to search throught he database to find reservations by mobile number (or part of mobile number).
 
-##Developed Using##
+## Developed Using
 --------------
 JavaScript ES6
 React Framework
@@ -14,8 +14,7 @@ Vercel (frontend deployment)
 Heroku (backend deployment)
 Jest (testing)
 
-###
-Author: Daniel C. Lechok
-Date: 12/15/2021
-Website: dclechok.dev
-###
+### Author: Daniel C. Lechok
+### Date: 12/15/2021
+### Website: dclechok.dev
+
