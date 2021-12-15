@@ -166,7 +166,7 @@ function Dashboard({
       abortController.abort();
     }; //cleanup, cancels any incoming api calls
   }, [toggleButton]);
-  console.log('deployment is not working??');
+
   // if (reservations.data) {
   return (
     <div className="main-div-width">

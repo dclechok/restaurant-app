@@ -57,9 +57,9 @@ function Reservations({ reservation, setToggleReload, toggleReload }) {
         <br />
         <span>Last Name: {last_name}</span>
         <br />
-        <span>Date of Reservation: {reservation_date}</span>
+        <span>Date of Reservation: {formatReservationDate(reservation).reservation_date}</span>
         <br />
-        <span>Time of Reservation: {reservation_time}</span>
+        <span>Time of Reservation: {formatReservationTime(reservation).reservation_time}</span>
         <br />
         <span>Mobile Number: {mobile_number}</span>
         <br />
