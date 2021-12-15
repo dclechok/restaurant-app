@@ -19,7 +19,7 @@ function TablesForm() {
         pathname: "/dashboard",
       });
     }
-  }, [validTable]);
+  }, [validTable, history]);
 
   function handleSubmit(e) {
     e.preventDefault();

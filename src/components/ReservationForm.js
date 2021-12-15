@@ -33,7 +33,7 @@ function ReservationForm({ setUseDate, setErrors }) {
     if (currentUrl === `/reservations/${reservation_id}/edit`) {
       setIsEditPage(true); // the page is an edit page, not create page
     }
-  }, []);
+  }, [currentUrl, reservation_id]);
 
   function handleSubmit(e) {
     //validate fields and make call to API
@@ -120,7 +120,7 @@ function ReservationForm({ setUseDate, setErrors }) {
       loadRes();
     }
     return () => abortController.abort();
-  }, []);
+  }, [RESERVATIONS_URL, currentUrl, reservation_id]);
 
   const handleChange = ({ target }) => {
     setPlaceholder({

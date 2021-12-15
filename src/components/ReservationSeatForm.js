@@ -20,7 +20,7 @@ function ReservationSeatForm({ setUseDate }) {
       }
     }
     loadTables(); //populate select list of available tables
-  }, []);
+  }, [TABLES_URL]);
 
   function handleSubmit(e) {
     //seat table
